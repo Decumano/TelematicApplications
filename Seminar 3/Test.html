@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+    <HEAD><TITLE>Seminar 3 Test page</TITLE></HEAD>
+    <style>
+        html {
+            display: table;
+        }
+        body {
+            display:flex;
+            justify-content:center;
+            flex-direction: column;
+        }
+        html, body {
+            width: 99%;
+            height: 99%;
+            margin-left: 0.5%;
+            margin-top: 0.5%;
+            margin-right: 0.5%;
+            margin-bottom: 0.5%;
+        }
+        .second-body, .title {
+            display:flex;
+            flex-direction: row;
+            margin: 0;
+            position: absolute;
+        }
+        .title {
+            top: 10%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+        }
+        .second-body{
+            top: 25%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+        }
+    </style>
+    <BODY BGCOLOR="#020929">
+        <div class = "title">
+            <h1>
+                Test
+            </h1>
+        </div>
+        <div class="second-body">
+            <p> 
+                Click <A HREF="/Servlet">here</A> to visit the servlet.
+            </p>
+        </div>
+    </BODY>
+</HTML>
