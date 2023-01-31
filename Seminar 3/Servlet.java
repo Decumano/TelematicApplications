@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.Enumeration;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -10,6 +12,7 @@ public class Servlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n";
+
         out.println
         (
             docType +
@@ -17,6 +20,7 @@ public class Servlet extends HttpServlet {
             " <head><title>Test Servlet</title></head>\n" +
             "<body>\n" +
             " <h1>Hello!</h1>\n" +
+            " <p>" + request.getLocalAddr() + "\n" + request.getMethod() + "\n" + request.getProtocol() + "\n" +
             "</body></html>"
         );
     }
