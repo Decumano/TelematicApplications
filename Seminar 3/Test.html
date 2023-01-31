@@ -39,16 +39,6 @@
             transform: translate(-50%, -50%);
             background-color: transparent;
         }
-        .password {
-            position: relative;
-            list-style: none;
-        }
-        .password:before {
-            content: "*";
-            position: absolute;
-            left: -15px;
-            bottom: -3px;
-        }
     </style>
     <BODY BGCOLOR="#020929">
         <div class = "title">
@@ -57,11 +47,8 @@
             </h1>
         </div>
         <div class="second-body">
-            <p> 
-                Click <A HREF="/Servlet">here</A> to visit the servlet.
-            </p><br>
             <div>
-                <form>
+                <form action="/Servlet" name="Input" method="get">
                     <label for="Username">Username: </label><br>
                     <input type="text" id="Username" name="Username"><br>
                     <label for="Password">Password:</label><br>

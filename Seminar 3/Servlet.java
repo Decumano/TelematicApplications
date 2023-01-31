@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.Enumeration;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -13,6 +12,9 @@ public class Servlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n";
 
+        String username = request.getParameter("Username");
+        String password = request.getParameter("Password");
+
         out.println
         (
             docType +
@@ -20,7 +22,8 @@ public class Servlet extends HttpServlet {
             " <head><title>Test Servlet</title></head>\n" +
             "<body>\n" +
             " <h1>Hello!</h1>\n" +
-            " <p>" + request.getLocalAddr() + "\n" + request.getMethod() + "\n" + request.getProtocol() + "\n" +
+            " <p>" + request.getLocalAddr() + "</p>\n<p>" + request.getMethod() + "</p>\n<p>" + request.getProtocol() + "</p>\n<p>"
+            + request.getHeader("Username") + "</p>\n<p>Username: " + username + "</p>\n<p>Password: " + password + "</p>\n" +
             "</body></html>"
         );
     }
