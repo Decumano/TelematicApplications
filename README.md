@@ -1,2 +1,2 @@
 # TelematicApplications
- Telematic Applications repository Applications
+ Telematic Applications repository foe the seminars and labs.
