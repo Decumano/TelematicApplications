@@ -1,4 +1,4 @@
-package upf.at.s4.server;
+package upf.at.s4.data;
 
 
 public class Item {

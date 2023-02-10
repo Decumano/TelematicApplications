@@ -2,6 +2,9 @@ package upf.at.s4.server;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import upf.at.s4.data.Item;
+
 import java.util.ArrayList;
 import java.util.List;
 
