@@ -8,6 +8,7 @@ public class Item {
 
     public Item ()
     {
+        super();
         name = "";
         price = 0;
         quantity = 0;
@@ -15,6 +16,7 @@ public class Item {
 
     public Item (String n, int p, int q)
     {
+        super();
         name = n;
         price = p;
         quantity = q;

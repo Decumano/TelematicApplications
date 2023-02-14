@@ -14,14 +14,13 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.WebApplicationException;
 
 
 @Path("/item")
 public class Services {
 
     static List<Item> items = new ArrayList<>();
-
-    static Item error404 = new Item("error 404: Item not found", 404, 1);
     
     @POST
     @Path("/add")
@@ -45,13 +44,13 @@ public class Services {
                 return item;
             }
         }
-        return error404;
+        throw new WebApplicationException(404);
     }
 
     @GET
-    @Path("/get/all")
+    @Path("/list")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Item> get()
+    public List<Item> getAll()
     {
         return items;
     }
