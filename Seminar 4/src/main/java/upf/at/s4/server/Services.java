@@ -20,7 +20,7 @@ import javax.ws.rs.WebApplicationException;
 @Path("/item")
 public class Services {
 
-    static List<Item> items = new ArrayList<>();
+    static List<Item> items = new ArrayList<Item>();
     
     @POST
     @Path("/add")
@@ -35,13 +35,13 @@ public class Services {
     @GET
     @Path("/get/{name}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Item get(@PathParam("name") String name)
+    public Response get(@PathParam("name") String name)
     {
         for (Item item : items)
         {
             if(item.getName().equalsIgnoreCase(name))
             {
-                return item;
+                return Response.status(200).entity(item).build();
             }
         }
         throw new WebApplicationException(404);
